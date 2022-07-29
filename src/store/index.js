@@ -1,13 +1,22 @@
 import { createStore } from 'vuex'
 
 export default createStore({
-  state: {
-  },
   getters: {
   },
   mutations: {
+    LANG(state,val){
+      state.lang = val
+    },
+    VIDEOURL(state,val){
+      state.videoUrl = val
+    }
   },
   actions: {
+  },
+  state: {
+    lang:"",
+    videoUrl:''
+
   },
   modules: {
   }
