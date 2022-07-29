@@ -61,11 +61,19 @@
 
 <script>
 import { reactive, toRefs} from "vue";
+import {ElDropdown,ElButton,ElIcon,ElDropdownItem,ElDropdownMenu} from 'element-plus';
 import { useRouter } from "vue-router";
 import axios from "axios";
 import {useStore} from "vuex";
 import Url from '../CommonAsset/js/config';
 export default {
+  components:{
+    ElDropdown,
+    ElButton,
+    ElIcon,
+    ElDropdownItem,
+    ElDropdownMenu
+  },  
   setup() {
     const router = useRouter();
     const state = reactive({

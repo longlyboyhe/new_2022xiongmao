@@ -60,9 +60,8 @@ export default {
     const list = el =>{ state.list.push(el)}
   
     onMounted(() => {
-      setTimeout(() => {
-         lineColor()
-      }, 200);
+     nextTick(()=>{lineColor()})    
+     
     });
     // 只有中文情况下设置行高
     function lineHeight() {
@@ -73,11 +72,13 @@ export default {
     }
 
     function lineColor() {
-        for (let i = 0; i < state.list.length; i++) {
+       setTimeout(() => {
+         for (let i = 0; i < state.list.length; i++) {
           if (i % 2 == 0) {
             state.list[i].style.backgroundColor = "#f5f5f5";
           }
         }
+       }, 20);
     }
     function goRead(id) {
       router.push({
