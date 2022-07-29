@@ -1,8 +1,8 @@
-# 2022panda
+# 2022熊猫绘本新版本
 
-## Project setup
+## 本项目是之前的熊猫绘本重做改版后的版本
 ```
-npm install
+###使用到的技术有vue3+vuex+elementUI+axios+vue router.
 ```
 
 ### Compiles and hot-reloads for development
